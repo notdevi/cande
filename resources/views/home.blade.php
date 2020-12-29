@@ -3,15 +3,17 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center mt-4 mb-3">
-            <div class="thumbnail ml-3 mr-3">
-                <img src="{{ asset('assets/i1.PNG') }}" alt="..." class="">
-                <a href="#" class="">
-                    <div class="caption">
-                        <h4 style="font-weight: bold; color: #000000">Rp 50.000</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="thumbnail ml-3 mr-3">
+        @foreach ($items as $item)
+        <div class="thumbnail ml-3 mr-3 mb-2">
+            <img src="{{ url('assets') }}/{{ $item->picture }}" alt="..." class="">
+            <a href="{{ url('detail') }}/{{ $item->id }}" class="">
+                <div class="caption">
+                    <h4 style="font-weight: bold; color: #000000">Rp {{ number_format($item->price) }}</h4>
+                </div>
+            </a>
+        </div>
+        @endforeach
+            <div class="thumbnail ml-3 mr-3 mb-2">
                 <img src="{{ asset('assets/i2.PNG') }}" alt="..." class="">
                 <a href="#" class="">
                     <div class="caption">
@@ -19,7 +21,7 @@
                     </div>
                 </a>
             </div>
-            <div class="thumbnail ml-3 mr-3">
+            <div class="thumbnail ml-3 mr-3 mb-2">
                 <img src="{{ asset('assets/i3.PNG') }}" alt="..." class="">
                 <a href="#" class="">
                     <div class="caption">
@@ -27,7 +29,7 @@
                     </div>
                 </a>
             </div>
-            <div class="thumbnail ml-3 mr-3">
+            <div class="thumbnail ml-3 mr-3 mb-2">
                 <img src="{{ asset('assets/i4.PNG') }}" alt="..." class="">
                 <a href="#" class="">
                     <div class="caption">
@@ -35,7 +37,7 @@
                     </div>
                 </a>
             </div>
-            <div class="thumbnail ml-3 mr-3">
+            <div class="thumbnail ml-3 mr-3 mb-2">
                 <img src="{{ asset('assets/i5.PNG') }}" alt="..." class="">
                 <a href="#" class="">
                     <div class="caption">
@@ -43,7 +45,7 @@
                     </div>
                 </a>
             </div>
-            <div class="thumbnail ml-3 mr-3">
+            <div class="thumbnail ml-3 mr-3 mb-2">
                 <img src="{{ asset('assets/i6.PNG') }}" alt="..." class="">
                 <a href="#" class="">
                     <div class="caption">
@@ -51,7 +53,7 @@
                     </div>
                 </a>
             </div>
-            <div class="thumbnail ml-3 mr-3">
+            <div class="thumbnail ml-3 mr-3 mb-2">
                 <img src="{{ asset('assets/i7.PNG') }}" alt="..." class="">
                 <a href="#" class="">
                     <div class="caption">
@@ -59,7 +61,7 @@
                     </div>
                 </a>
             </div>
-            <div class="thumbnail ml-3 mr-3">
+            <div class="thumbnail ml-3 mr-3 mb-2">
                 <img src="{{ asset('assets/i9.PNG') }}" alt="..." class="">
                 <a href="#" class="">
                     <div class="caption">
