@@ -25,5 +25,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/edit', function() {
     return view('profile.editprofile');
 });
+Route::get('/user/profile', function() {
+    return view('profile.show');
+});
 
 Route::get('detail/{id}', 'DetailController@index');

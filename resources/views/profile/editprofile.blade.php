@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center py-0" ><img class="rounded-circle" style="width: 300px; height:300px"src="https://cdn4.iconfinder.com/data/icons/instagram-ui-twotone/48/Paul-18-512.png">
+                <div class="d-flex flex-column align-items-center text-center py-0" ><img style="width: 300px; height:300px"src="https://cdn4.iconfinder.com/data/icons/instagram-ui-twotone/48/Paul-18-512.png">
                 <span class="font-weight-bold">{{ Auth::user()->name }}</span></div>
             <div class="row mt-3 justify-content-center">
                 <div class="mt-5 text-center mr-2"><button class="btn btn-warning" type="button">Confirm</button></div>
