@@ -33,9 +33,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/edit', function() {
     return view('profile.editprofile');
 });
-Route::get('/user/profile', function() {
-    return view('profile.show');
-});
+Route::get('/user/profile', 'ProfileController@index')->name('profile');
 
 Route::get('/product/create', 'ItemController@create');
 Route::post('/product/store', 'ItemController@store');
@@ -44,4 +42,12 @@ Route::get('detail/{id}', 'DetailController@index');
 
 Route::get('/cart', 'ProductController@index');
 
+<<<<<<< HEAD
 Route::post('pesan/{id}', 'ProductController@pesan');
+=======
+Route::post('pesan/{id}', 'ProductController@pesan');
+
+Route::get('/cart', function () {
+    return view('cart');
+    });
+>>>>>>> b2decccfb26f8abb4f5ba68667d99ebbdac8aa74
