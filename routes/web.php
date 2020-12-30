@@ -39,3 +39,7 @@ Route::get('detail/{id}', 'DetailController@index');
 Route::get('/cart', 'ProductController@index');
 
 Route::post('pesan/{id}', 'ProductController@pesan');
+
+Route::get('/cart', function () {
+    return view('cart');
+    });
