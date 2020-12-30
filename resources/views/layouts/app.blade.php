@@ -62,7 +62,7 @@
                         @else
                             <li class="nav-item mt-auto mb-auto ml-1">
                                 <button type="submit" class="btn" style="border: none; background-color: white;"
-                                href="#">
+                                onclick="location.href='{{ url('cart') }}'">
                                 <i class="fa fa-shopping-cart"></i></button>                               
                             </li>
 

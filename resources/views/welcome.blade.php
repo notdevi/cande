@@ -11,7 +11,8 @@
         <h5 style="font-style: italic;">designer, preloved, streetwear, one and only</h5>
         <h5 style="font-style: italic;">whatever you wear, find it on cande</h5>
             
-        <input style="background-color: black; color: white; font-weight: bold;" class="button btn" type="button" value="Shop Now" href="#">
+        <input style="background-color: black; color: white; font-weight: bold;" class="button btn" 
+        type="button" value="Shop Now" onclick="location.href='{{ url('home') }}'">
     </div>
 
     <img style="width: 100%; height: 400px;" src="<?php echo asset('assets/home-bg.png')?>" alt="">
@@ -49,7 +50,7 @@
             </p>
 
             <input style="background-color: black; color: white; font-weight: bold;" 
-            class="button btn" type="button" value="Sign Up" href="{{ route('register') }}">
+            class="button btn" type="button" value="Sign Up" onclick="location.href='{{ route('register') }}'">
         </div>
 
         <img style="width: 350px;" src="<?php echo asset('assets/home-2.jpg')?>" alt="">
