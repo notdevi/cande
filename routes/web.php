@@ -29,4 +29,7 @@ Route::get('/user/profile', function() {
     return view('profile.show');
 });
 
+Route::get('/product/create', 'ItemController@create');
+Route::post('/product/store', 'ItemController@store');
+
 Route::get('detail/{id}', 'DetailController@index');
