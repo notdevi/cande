@@ -48,14 +48,11 @@
                                             <td>Qty</td>
                                             <td>:</td>
                                             <td>
+                                                <form action="{{ url('pesan') }}/{{ $item->id }}" method="POST">
+                                                @csrf
                                                 <input type="text" name="order_qty" class="form-control" required>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td>
-                                                <button type="submit" class="btn btn-warning" style="border-radius: 10px;"> <i class="fa fa-shopping-cart"></i>  Add to Cart</button>
+                                                <button type="submit" class="mt-3 btn btn-warning" style="border-radius: 10px;"> <i class="fa fa-shopping-cart"></i>  Add to Cart</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     </form>
