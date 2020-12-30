@@ -29,6 +29,9 @@ class ItemController extends Controller
             'stock' => $request->stock
         ]);
 
-        return view('profile.show');
+        $id = Auth::user()->id;
+        $items = item::where('user_id', $id);
+
+        return view('profile.show', compact('items'));
     }
 }

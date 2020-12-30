@@ -25,7 +25,17 @@
 			<li class="d-inline-block" style="font-size: 1.6rem; margin-right: 2rem;"><span class="font-weight-bold">206</span> following</li>
 		</ul>
     </div>
-    <div class="row justify-content-right mt-4 mb-3">
+    <div class="row justify-content-center mt-4 mb-3">
+        @foreach ($items as $item)
+        <div class="thumbnail ml-3 mr-3 mb-2">
+            <img src="{{ url('assets') }}/{{ $item->picture }}" alt="..." class="">
+            <a href="{{ url('detail') }}/{{ $item->id }}" class="">
+                <div class="caption">
+                    <h4 style="font-weight: bold; color: #000000">Rp {{ number_format($item->price) }}</h4>
+                </div>
+            </a>
+        </div>
+        @endforeach
             <div class="thumbnail ml-3 mr-3 mb-2">
                 <img src="{{ asset('assets/i2.PNG') }}" alt="..." class="">
                 <a href="#" class="">
@@ -82,7 +92,7 @@
                     </div>
                 </a>
             </div>
-</div>
+    </div>
 </div>
 <footer class="py-2 mt-2 bg-dark text-center">
     <p class=" text-center text-white"> Follow Us :</p>

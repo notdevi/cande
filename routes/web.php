@@ -29,9 +29,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/edit', function() {
     return view('profile.editprofile');
 });
-Route::get('/user/profile', function() {
-    return view('profile.show');
-});
+Route::get('/user/profile', 'ProfileController@index')->name('profile');
 
 Route::get('/product/create', 'ItemController@create');
 Route::post('/product/store', 'ItemController@store');
